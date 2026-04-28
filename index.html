@@ -19,7 +19,8 @@
   "description": "Productora creativa de cine, publicidad y contenido original.",
   "url": "https://www.pezguia.com",
   "contactPoint": [
-    { "@type": "ContactPoint", "email": "d@pezguia.com", "contactType": "general" }
+    { "@type": "ContactPoint", "email": "info@pezguia.com", "contactType": "general" },
+    { "@type": "ContactPoint", "email": "produccion@pezguia.com", "contactType": "production" }
   ]
 }
 </script>
@@ -830,9 +831,9 @@ footer {
 </div>
 
 <!-- CREDENTIALS -->
-<div class="section-label" data-es="Créditos" data-en="Credentials">Créditos</div>
+<div class="section-label" data-es="Créditos" data-en="Credentials" style="display:none">Créditos</div>
 
-<div class="credentials-inner">
+<div class="credentials-inner" style="display:none">
   <p class="credentials-intro" data-es="Hemos trabajado con plataformas, organizaciones e instituciones de alcance global." data-en="We have worked with platforms, organizations, and institutions of global reach.">Hemos trabajado con plataformas, organizaciones e instituciones de alcance global.</p>
 
   <div class="credentials-list">
@@ -882,8 +883,8 @@ footer {
     <h2 class="contact-headline" data-es="Hagamos<br/>algo <em>grande.</em>" data-en="Let's make<br/>something <em>great.</em>">Hagamos<br/>algo <em>grande.</em></h2>
     <div class="contact-details">
       <div class="contact-detail">
-        <span class="contact-detail-label" data-es="Correo" data-en="Email">Correo</span>
-        <a href="mailto:d@pezguia.com">d@pezguia.com</a>
+        <span class="contact-detail-label" data-es="Contacto" data-en="Contact">Contacto</span>
+        <a href="mailto:info@pezguia.com">info@pezguia.com</a>
       </div>
       <div class="contact-detail">
         <span class="contact-detail-label" data-es="Teléfono" data-en="Phone">Teléfono</span>
@@ -897,7 +898,7 @@ footer {
   </div>
   <div class="contact-right">
     <form class="contact-form" id="contactForm">
-      <input type="hidden" name="access_key" value="001977d7-e9fc-44e0-8dea-302569c8c527"/>
+      <input type="hidden" name="access_key" value="1b280ae6-ac5f-4992-a474-a1b67c6f2482"/>
       <div class="form-field">
         <label data-es="Nombre" data-en="Name">Nombre</label>
         <input type="text" name="name" data-es="Tu nombre" data-en="Your name" placeholder="Tu nombre" required/>
@@ -952,11 +953,11 @@ footer {
           msg.textContent = lang === 'en' ? 'Message sent. We\'ll be in touch soon.' : 'Mensaje enviado. Nos ponemos en contacto pronto.';
           form.reset();
         } else {
-          msg.textContent = lang === 'en' ? 'There was an error. Please write to d@pezguia.com' : 'Hubo un error. Escríbenos a d@pezguia.com';
+          msg.textContent = lang === 'en' ? 'There was an error. Please write to info@pezguia.com' : 'Hubo un error. Escríbenos a info@pezguia.com';
         }
       })
       .catch(function(){
-        msg.textContent = lang === 'en' ? 'There was an error. Please write to d@pezguia.com' : 'Hubo un error. Escríbenos a d@pezguia.com';
+        msg.textContent = lang === 'en' ? 'There was an error. Please write to info@pezguia.com' : 'Hubo un error. Escríbenos a info@pezguia.com';
       })
       .finally(function(){
         btn.textContent = (localStorage.getItem('pg-lang')||'es') === 'en' ? 'Send' : 'Enviar';
