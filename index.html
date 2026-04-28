@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pez Guía Studio. Producción cinematográfica y publicidad</title>
+<meta name="description" content="Pez Guía Studio es una productora creativa fundada por Denisse Prieto y Cecilia Parodi. Producción de cine, series y publicidad con raíces en México, Argentina y EUA."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Pez Guía Studio"/>
+<meta property="og:title" content="Pez Guía Studio. Producción cinematográfica y publicidad"/>
+<meta property="og:description" content="Producimos historias con autenticidad, sensibilidad e imaginación. Cine, publicidad y contenido original para plataformas globales."/>
+<link rel="icon" type="image/png" href="img/logos/favicon-black.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Pez Guía Studio",
+  "description": "Productora creativa de cine, publicidad y contenido original.",
+  "url": "https://www.pezguia.com",
+  "contactPoint": [
+    { "@type": "ContactPoint", "email": "d@pezguia.com", "contactType": "general" }
+  ]
+}
+</script>
+<style>
+@font-face {
+  font-family: 'NHG';
+  src: url('fonts/NeueHaasGroteskDisplay-55Roman.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'NHG';
+  src: url('fonts/NeueHaasGroteskDisplay-65Medium.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'AntarcticanMono';
+  src: url('fonts/AntarcticanMono-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --dark: #1D1C1D;
+  --cream: #E5E4DD;
+  --gold: #9E7126;
+  --yellow: #FEFF5B;
+  --muted: rgba(229,228,221,0.45);
+  --border: rgba(229,228,221,0.15);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'NHG', sans-serif;
+  background: var(--dark);
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+nav {
+  padding: 1.25rem 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--dark);
+  z-index: 100;
+}
+
+.nav-logo img { height: 36px; width: auto; display: block; }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--cream);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.nav-links a:hover { opacity: 1; }
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  border-left: 1px solid var(--border);
+  padding-left: 1.5rem;
+}
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 0;
+  transition: color 0.15s, opacity 0.15s;
+  color: var(--cream);
+  opacity: 0.4;
+}
+.lang-btn.active { opacity: 1; }
+.lang-btn:hover { opacity: 1; }
+.lang-sep { color: var(--muted); font-size: 0.65rem; padding: 0 0.15rem; }
+
+/* hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--cream);
+  transition: all 0.25s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 92vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-content {
+  padding: 5rem 4% 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--border);
+}
+
+.hero-eyebrow {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-family: 'NHG', sans-serif;
+  font-weight: 500;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hero-tagline {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 340px;
+}
+
+.hero-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(20%);
+}
+
+/* ── SECTION LABELS ── */
+.section-label {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 1.25rem 4%;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── PROJECTS ── */
+.project-header {
+  padding: 3.5rem 4% 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  border-bottom: 1px solid var(--border);
+  align-items: end;
+}
+
+.project-title {
+  font-family: 'NHG', sans-serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+}
+
+.project-title em {
+  font-style: normal;
+  color: var(--yellow);
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.project-type {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.project-synopsis {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 420px;
+}
+
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.project-status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+  display: inline-block;
+}
+
+/* stills grid */
+.stills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2px;
+  border-bottom: 1px solid var(--border);
+}
+
+.still {
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  background: #111;
+}
+
+.still.tall {
+  grid-row: span 2;
+  aspect-ratio: auto;
+}
+
+.still img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease, filter 0.4s;
+  filter: grayscale(15%);
+}
+
+.still:hover img {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+
+/* ── ABOUT ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-image {
+  overflow: hidden;
+  border-right: 1px solid var(--border);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: grayscale(10%);
+}
+
+.about-content {
+  padding: 4rem 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.about-intro {
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: var(--cream);
+}
+
+.bio-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.bio-name {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.bio-text {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+/* ── SERVICES ── */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.service-item {
+  padding: 4rem 4%;
+  border-right: 1px solid var(--border);
+}
+
+.service-item:last-child { border-right: none; }
+
+.service-number {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.service-title {
+  font-family: 'NHG', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin-bottom: 1.5rem;
+}
+
+.service-desc {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 400px;
+}
+
+.service-list {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.service-list li {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+  opacity: 0.6;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.service-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+/* ── CREDENTIALS ── */
+.credentials-inner {
+  padding: 4rem 4%;
+  border-bottom: 1px solid var(--border);
+}
+
+.credentials-intro {
+  font-family: 'NHG', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin-bottom: 3rem;
+  max-width: 560px;
+}
+
+.credentials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+
+.credential-item {
+  padding: 1.25rem 2.5rem 1.25rem 0;
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.55;
+  border-bottom: 1px solid var(--border);
+  width: 25%;
+  transition: opacity 0.15s;
+}
+
+.credential-item:hover { opacity: 1; color: var(--yellow); }
+
+/* films row */
+.films-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+.film-item {
+  padding: 1.25rem 0;
+  width: 33.333%;
+  border-bottom: 1px solid var(--border);
+  padding-right: 2rem;
+}
+
+.film-title-cred {
+  font-family: 'NHG', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--cream);
+  margin-bottom: 0.25rem;
+}
+
+.film-note {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── CONTACT ── */
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-left {
+  padding: 4rem 4%;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.contact-headline {
+  font-family: 'NHG', sans-serif;
+  font-weight: 500;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+}
+
+.contact-headline em {
+  font-style: normal;
+  color: var(--yellow);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contact-detail-label {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.contact-detail a {
+  font-size: 0.9rem;
+  color: var(--cream);
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+.contact-detail a:hover { opacity: 1; }
+
+.contact-right {
+  padding: 4rem 4%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--cream);
+  font-family: 'NHG', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.75rem 0;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+
+.form-field select option { background: var(--dark); }
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus { border-bottom-color: var(--yellow); }
+
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: var(--muted); }
+
+.form-field textarea { resize: none; height: 100px; }
+
+.form-submit {
+  margin-top: 0.5rem;
+  background: var(--yellow);
+  color: var(--dark);
+  border: none;
+  padding: 0.9rem 2.5rem;
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s, opacity 0.2s;
+}
+.form-submit:hover { background: var(--cream); }
+
+.form-msg {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--yellow);
+  min-height: 1.2em;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 2rem 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy {
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.footer-logo img { height: 24px; width: auto; opacity: 0.5; }
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--dark);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    z-index: 50;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { font-size: 1.1rem; letter-spacing: 0.05em; opacity: 1; }
+  .hamburger { display: flex; z-index: 101; }
+  .lang-toggle { display: none; }
+
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-content { padding: 3rem 5% 2.5rem; border-right: none; border-bottom: 1px solid var(--border); }
+  .hero-image { height: 55vw; border-right: none; }
+
+  .project-header { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 5%; }
+  .stills-grid { grid-template-columns: 1fr 1fr; }
+  .still.tall { grid-row: span 1; aspect-ratio: 16/10; }
+
+  .about-grid { grid-template-columns: 1fr; }
+  .about-image { height: 60vw; border-right: none; border-bottom: 1px solid var(--border); }
+  .about-content { padding: 2.5rem 5%; }
+
+  .services-grid { grid-template-columns: 1fr; }
+  .service-item { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 5%; }
+
+  .credential-item { width: 50%; }
+  .film-item { width: 100%; }
+
+  .contact-inner { grid-template-columns: 1fr; }
+  .contact-left { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 5%; }
+  .contact-right { padding: 2.5rem 5%; }
+
+  footer { flex-direction: column; gap: 1.25rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#"><img alt="Pez Guía Studio" src="img/logos/Horizontal Lockup - Cream.png"/></a>
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a data-es="Proyectos" data-en="Projects" href="#proyectos">Proyectos</a></li>
+      <li><a data-es="Nosotras" data-en="About" href="#nosotras">Nosotras</a></li>
+      <li><a data-es="Servicios" data-en="Services" href="#servicios">Servicios</a></li>
+      <li><a data-es="Contacto" data-en="Contact" href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="es">ES</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Pez Guía Studio</p>
+    <h1 data-es="Donde el cine y la conexión humana cobran vida." data-en="Where the craft of filmmaking and human connection come to life.">Donde el cine y la conexión humana cobran vida.</h1>
+    <div class="hero-meta">
+      <p class="hero-tagline" data-es="Guiando ideas audaces desde la chispa hasta la pantalla.<br/>México · Argentina · EUA" data-en="Guiding bold ideas from spark to screen.<br/>Mexico · Argentina · USA">Guiando ideas audaces desde la chispa hasta la pantalla.<br/>México · Argentina · EUA</p>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img alt="Denisse Prieto y Cecilia Parodi" src="img/founders/founders-3.jpg"/>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<div class="section-label" id="proyectos" data-es="Proyectos" data-en="Projects">Proyectos</div>
+
+<div class="project-header">
+  <h2 class="project-title" data-es="La Divina<br/><em>Providencia</em>" data-en="La Divina<br/><em>Providencia</em>">La Divina<br/><em>Providencia</em></h2>
+  <div class="project-meta">
+    <span class="project-type" data-es="Documental · En desarrollo" data-en="Documentary · In development">Documental · En desarrollo</span>
+    <p class="project-synopsis" data-es="Un documental que explora la fe, la devoción y la vida cotidiana a través de historias que revelan la esencia de la condición humana. Un retrato íntimo de quienes encuentran en lo divino su guía." data-en="A documentary exploring faith, devotion, and everyday life through stories that reveal the essence of the human condition. An intimate portrait of those who find their guide in the divine.">Un documental que explora la fe, la devoción y la vida cotidiana a través de historias que revelan la esencia de la condición humana. Un retrato íntimo de quienes encuentran en lo divino su guía.</p>
+    <span class="project-status" data-es="En desarrollo" data-en="In development">En desarrollo</span>
+  </div>
+</div>
+
+<div class="stills-grid">
+  <div class="still tall">
+    <img alt="La Divina Providencia" src="img/stills/still-2.jpg"/>
+  </div>
+  <div class="still">
+    <img alt="La Divina Providencia" src="img/stills/still-1.jpg"/>
+  </div>
+  <div class="still">
+    <img alt="La Divina Providencia" src="img/stills/still-4.jpg"/>
+  </div>
+  <div class="still">
+    <img alt="La Divina Providencia" src="img/stills/still-3.jpg"/>
+  </div>
+  <div class="still">
+    <img alt="La Divina Providencia" src="img/stills/still-6.png"/>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section-label" id="nosotras" data-es="Nosotras" data-en="About">Nosotras</div>
+
+<div class="about-grid">
+  <div class="about-image">
+    <img alt="Denisse Prieto y Cecilia Parodi" src="img/founders/founders-1.jpg"/>
+  </div>
+  <div class="about-content">
+    <p class="about-intro" data-es="Pez Guía Studio es una productora creativa fundada por Denisse Prieto y Cecilia Parodi, un dúo de productoras con más de 16 años de experiencia en cine, series y contenido original para plataformas como Netflix y Paramount, con trayectoria en Argentina, México y EUA." data-en="Pez Guía Studio is a creative production company founded by Denisse Prieto and Cecilia Parodi, a producer duo with over 16 years of experience in film, series, and original content for platforms such as Netflix and Paramount, with a trajectory spanning Argentina, Mexico, and the USA.">Pez Guía Studio es una productora creativa fundada por Denisse Prieto y Cecilia Parodi, un dúo de productoras con más de 16 años de experiencia en cine, series y contenido original para plataformas como Netflix y Paramount, con trayectoria en Argentina, México y EUA.</p>
+
+    <p class="about-intro" style="font-size: 0.95rem; line-height: 1.75; color: var(--muted);" data-es="En Pez Guía Studio, la ficción y la publicidad se encuentran bajo una misma filosofía creativa: contar historias con autenticidad, sensibilidad e imaginación audaz, siempre comprometidas con la excelencia, la emoción y la narrativa que conecta." data-en="At Pez Guía Studio, fiction and advertising meet under the same creative philosophy: to craft stories with authenticity, sensitivity, and bold imagination, always committed to excellence, emotion, and storytelling that connects.">En Pez Guía Studio, la ficción y la publicidad se encuentran bajo una misma filosofía creativa: contar historias con autenticidad, sensibilidad e imaginación audaz, siempre comprometidas con la excelencia, la emoción y la narrativa que conecta.</p>
+
+    <div class="bio-block">
+      <span class="bio-name">Cecilia Parodi</span>
+      <p class="bio-text" data-es="Productora de cine galardonada con títulos como El Comediante (Mejor Película, FIG 2021) y El Rey de la Fiesta (Mejor Película, FIC Monterrey). Ha colaborado con UNICEF, ONU Mujeres e Ibermedia, y fungió como asesora de COOFILM, residencia de cine apoyada por la Unión Europea en España. Actualmente lidera proyectos bajo Pez Guía Studio y coescribe el segundo largometraje del director Rodrigo Guardiola." data-en="Award-winning film producer with credits including El Comediante (Best Film, FIG 2021) and El Rey de la Fiesta (Best Film, FIC Monterrey). She has collaborated with UNICEF, UN Women, and Ibermedia, and served as an advisor for COOFILM, a film residency supported by the European Union in Spain. She currently leads projects under Pez Guía Studio while co-writing the second feature film by director Rodrigo Guardiola.">Productora de cine galardonada con títulos como El Comediante (Mejor Película, FIG 2021) y El Rey de la Fiesta (Mejor Película, FIC Monterrey). Ha colaborado con UNICEF, ONU Mujeres e Ibermedia, y fungió como asesora de COOFILM, residencia de cine apoyada por la Unión Europea en España. Actualmente lidera proyectos bajo Pez Guía Studio y coescribe el segundo largometraje del director Rodrigo Guardiola.</p>
+    </div>
+
+    <div class="bio-block">
+      <span class="bio-name">Denisse Prieto</span>
+      <p class="bio-text" data-es="Productora y directora de casting originaria de Guadalajara, apasionada por contar historias significativas. Ha producido más de diez largometrajes, entre ellos Ya Veremos, una de las películas mexicanas más taquilleras de todos los tiempos. Sus créditos incluyen The Waiter, For Better, For Worse, A Woman with No Filter, la unidad mexicana de Emily the Criminal protagonizada por Aubrey Plaza, y su más reciente film Las Tres Sisters (con Cristo Fernández). En publicidad, ha colaborado con marcas globales como Apple. Basada entre Los Ángeles y Ciudad de México." data-en="Producer and casting director from Guadalajara, passionate about telling meaningful stories. She has produced over ten feature films, including Ya Veremos, one of the highest-grossing Mexican films of all time. Her credits include The Waiter, For Better, For Worse, A Woman with No Filter, the Mexican unit of Emily the Criminal starring Aubrey Plaza, and her latest film Las Tres Sisters (starring Cristo Fernández). In advertising, she has collaborated with major global brands such as Apple. Based between Los Angeles and Mexico City.">Productora y directora de casting originaria de Guadalajara, apasionada por contar historias significativas. Ha producido más de diez largometrajes, entre ellos Ya Veremos, una de las películas mexicanas más taquilleras de todos los tiempos. Sus créditos incluyen The Waiter, For Better, For Worse, A Woman with No Filter, la unidad mexicana de Emily the Criminal protagonizada por Aubrey Plaza, y su más reciente film Las Tres Sisters (con Cristo Fernández). En publicidad, ha colaborado con marcas globales como Apple. Basada entre Los Ángeles y Ciudad de México.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section-label" id="servicios" data-es="Servicios" data-en="Services">Servicios</div>
+
+<div class="services-grid">
+  <div class="service-item">
+    <div class="service-number">01</div>
+    <h3 class="service-title" data-es="Producción<br/>cinematográfica" data-en="Film<br/>production">Producción<br/>cinematográfica</h3>
+    <p class="service-desc" data-es="Desarrollamos y producimos largometrajes, series y contenido original para plataformas globales. Desde la concepción creativa hasta la entrega final, acompañamos cada proyecto con visión, experiencia y compromiso artístico." data-en="We develop and produce feature films, series, and original content for global platforms. From creative conception to final delivery, we accompany each project with vision, experience, and artistic commitment.">Desarrollamos y producimos largometrajes, series y contenido original para plataformas globales. Desde la concepción creativa hasta la entrega final, acompañamos cada proyecto con visión, experiencia y compromiso artístico.</p>
+    <ul class="service-list">
+      <li data-es="Largometrajes de ficción y documental" data-en="Fiction and documentary features">Largometrajes de ficción y documental</li>
+      <li data-es="Series y contenido para plataformas" data-en="Series and platform content">Series y contenido para plataformas</li>
+      <li data-es="Desarrollo y coproducción internacional" data-en="Development and international co-production">Desarrollo y coproducción internacional</li>
+      <li data-es="Casting" data-en="Casting">Casting</li>
+    </ul>
+  </div>
+  <div class="service-item">
+    <div class="service-number">02</div>
+    <h3 class="service-title" data-es="Producción<br/>publicitaria" data-en="Advertising<br/>production">Producción<br/>publicitaria</h3>
+    <p class="service-desc" data-es="Producimos campañas de foto y video para marcas que exigen excelencia narrativa. Con la misma sensibilidad que llevamos al cine, creamos piezas publicitarias que conectan, sorprenden y perduran." data-en="We produce photo and video campaigns for brands that demand narrative excellence. With the same sensibility we bring to film, we create advertising pieces that connect, surprise, and endure.">Producimos campañas de foto y video para marcas que exigen excelencia narrativa. Con la misma sensibilidad que llevamos al cine, creamos piezas publicitarias que conectan, sorprenden y perduran.</p>
+    <ul class="service-list">
+      <li data-es="Campañas de video y foto" data-en="Video and photo campaigns">Campañas de video y foto</li>
+      <li data-es="Contenido para redes y plataformas digitales" data-en="Social and digital platform content">Contenido para redes y plataformas digitales</li>
+      <li data-es="Producción ejecutiva" data-en="Executive production">Producción ejecutiva</li>
+      <li data-es="Marcas globales y locales" data-en="Global and local brands">Marcas globales y locales</li>
+    </ul>
+  </div>
+</div>
+
+<!-- CREDENTIALS -->
+<div class="section-label" data-es="Créditos" data-en="Credentials">Créditos</div>
+
+<div class="credentials-inner">
+  <p class="credentials-intro" data-es="Hemos trabajado con plataformas, organizaciones e instituciones de alcance global." data-en="We have worked with platforms, organizations, and institutions of global reach.">Hemos trabajado con plataformas, organizaciones e instituciones de alcance global.</p>
+
+  <div class="credentials-list">
+    <div class="credential-item">Netflix</div>
+    <div class="credential-item">Paramount</div>
+    <div class="credential-item">Apple</div>
+    <div class="credential-item">UNICEF</div>
+    <div class="credential-item" data-es="ONU Mujeres" data-en="UN Women">ONU Mujeres</div>
+    <div class="credential-item">Ibermedia</div>
+    <div class="credential-item" data-es="Unión Europea" data-en="European Union">Unión Europea</div>
+    <div class="credential-item">COOFILM</div>
+  </div>
+
+  <div class="films-row">
+    <div class="film-item">
+      <div class="film-title-cred">Ya Veremos</div>
+      <div class="film-note" data-es="Una de las películas mexicanas más taquilleras" data-en="One of the highest-grossing Mexican films">Una de las películas mexicanas más taquilleras</div>
+    </div>
+    <div class="film-item">
+      <div class="film-title-cred">El Comediante</div>
+      <div class="film-note" data-es="Mejor Película · FIG 2021" data-en="Best Film · FIG 2021">Mejor Película · FIG 2021</div>
+    </div>
+    <div class="film-item">
+      <div class="film-title-cred">El Rey de la Fiesta</div>
+      <div class="film-note" data-es="Mejor Película · FIC Monterrey" data-en="Best Film · FIC Monterrey">Mejor Película · FIC Monterrey</div>
+    </div>
+    <div class="film-item">
+      <div class="film-title-cred">Emily the Criminal</div>
+      <div class="film-note" data-es="Unidad mexicana · con Aubrey Plaza" data-en="Mexican unit · starring Aubrey Plaza">Unidad mexicana · con Aubrey Plaza</div>
+    </div>
+    <div class="film-item">
+      <div class="film-title-cred">Las Tres Sisters</div>
+      <div class="film-note" data-es="con Cristo Fernández" data-en="starring Cristo Fernández">con Cristo Fernández</div>
+    </div>
+    <div class="film-item">
+      <div class="film-title-cred">A Woman with No Filter</div>
+      <div class="film-note" data-es="Largometraje" data-en="Feature film">Largometraje</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section-label" id="contacto" data-es="Contacto" data-en="Contact">Contacto</div>
+
+<div class="contact-inner">
+  <div class="contact-left">
+    <h2 class="contact-headline" data-es="Hagamos<br/>algo <em>grande.</em>" data-en="Let's make<br/>something <em>great.</em>">Hagamos<br/>algo <em>grande.</em></h2>
+    <div class="contact-details">
+      <div class="contact-detail">
+        <span class="contact-detail-label" data-es="Correo" data-en="Email">Correo</span>
+        <a href="mailto:d@pezguia.com">d@pezguia.com</a>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label" data-es="Teléfono" data-en="Phone">Teléfono</span>
+        <a href="tel:+525567901620">+52 55 6790 1620</a>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Instagram</span>
+        <a href="https://instagram.com/pezguia" target="_blank" rel="noopener">@pezguia</a>
+      </div>
+    </div>
+  </div>
+  <div class="contact-right">
+    <form class="contact-form" id="contactForm">
+      <input type="hidden" name="access_key" value="001977d7-e9fc-44e0-8dea-302569c8c527"/>
+      <div class="form-field">
+        <label data-es="Nombre" data-en="Name">Nombre</label>
+        <input type="text" name="name" data-es="Tu nombre" data-en="Your name" placeholder="Tu nombre" required/>
+      </div>
+      <div class="form-field">
+        <label data-es="Correo electrónico" data-en="Email">Correo electrónico</label>
+        <input type="email" name="email" data-es="Tu correo" data-en="Your email" placeholder="Tu correo" required/>
+      </div>
+      <div class="form-field">
+        <label data-es="Asunto" data-en="Subject">Asunto</label>
+        <select name="subject">
+          <option value="" data-es="Selecciona un tema" data-en="Select a topic">Selecciona un tema</option>
+          <option value="coproduccion" data-es="Coproducción" data-en="Co-production">Coproducción</option>
+          <option value="publicidad" data-es="Publicidad" data-en="Advertising">Publicidad</option>
+          <option value="pitching" data-es="Pitching a plataformas" data-en="Platform pitching">Pitching a plataformas</option>
+          <option value="otro" data-es="Otro" data-en="Other">Otro</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label data-es="Mensaje" data-en="Message">Mensaje</label>
+        <textarea name="message" data-es="Cuéntanos sobre tu proyecto" data-en="Tell us about your project" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+      </div>
+      <button class="form-submit" type="submit" data-es="Enviar" data-en="Send">Enviar</button>
+      <p class="form-msg" id="formMsg"></p>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-copy" data-es="© 2025 Pez Guía Studio. Todos los derechos reservados." data-en="© 2025 Pez Guía Studio. All rights reserved.">© 2025 Pez Guía Studio. Todos los derechos reservados.</span>
+  <div class="footer-logo"><img alt="Pez Guía Studio" src="img/logos/Horizontal Lockup - Cream.png"/></div>
+</footer>
+
+<script>
+/* contact form */
+(function(){
+  var form = document.getElementById('contactForm');
+  var msg = document.getElementById('formMsg');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = form.querySelector('.form-submit');
+    var lang = localStorage.getItem('pg-lang') || 'es';
+    btn.textContent = lang === 'en' ? 'Sending…' : 'Enviando…';
+    btn.disabled = true;
+    var data = new FormData(form);
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
+      .then(function(r){ return r.json(); })
+      .then(function(res){
+        if(res.success){
+          msg.textContent = lang === 'en' ? 'Message sent. We\'ll be in touch soon.' : 'Mensaje enviado. Nos ponemos en contacto pronto.';
+          form.reset();
+        } else {
+          msg.textContent = lang === 'en' ? 'There was an error. Please write to d@pezguia.com' : 'Hubo un error. Escríbenos a d@pezguia.com';
+        }
+      })
+      .catch(function(){
+        msg.textContent = lang === 'en' ? 'There was an error. Please write to d@pezguia.com' : 'Hubo un error. Escríbenos a d@pezguia.com';
+      })
+      .finally(function(){
+        btn.textContent = (localStorage.getItem('pg-lang')||'es') === 'en' ? 'Send' : 'Enviar';
+        btn.disabled = false;
+      });
+  });
+})();
+</script>
+
+<script>
+/* bilingual toggle */
+(function(){
+  var lang = localStorage.getItem('pg-lang') || 'es';
+  function setLang(l){
+    lang = l;
+    localStorage.setItem('pg-lang', l);
+    document.querySelectorAll('.lang-btn').forEach(function(b){
+      b.classList.toggle('active', b.dataset.lang === l);
+    });
+    document.querySelectorAll('[data-es][data-en]').forEach(function(el){
+      if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA'){
+        el.placeholder = el.getAttribute('data-' + l);
+      } else {
+        el.innerHTML = el.getAttribute('data-' + l);
+      }
+    });
+    document.documentElement.lang = l;
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.lang-btn').forEach(function(b){
+      b.addEventListener('click', function(){ setLang(b.dataset.lang); });
+    });
+    setLang(lang);
+  });
+})();
+</script>
+
+<script>
+/* hamburger */
+(function(){
+  var btn = document.getElementById('hamburger');
+  var nav = document.getElementById('navLinks');
+  if(!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    btn.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e){
+    if(!btn.contains(e.target) && !nav.contains(e.target)){
+      btn.classList.remove('open');
+      nav.classList.remove('open');
+    }
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      btn.classList.remove('open');
+      nav.classList.remove('open');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
