@@ -148,7 +148,7 @@ nav {
 
 /* ── HERO ── */
 .hero {
-  min-height: 92vh;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid var(--border);
@@ -177,7 +177,7 @@ nav {
   font-size: clamp(2.6rem, 5vw, 5rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: var(--cream);
+  color: var(--yellow);
   flex: 1;
   display: flex;
   align-items: center;
@@ -198,6 +198,15 @@ nav {
   max-width: 340px;
 }
 
+.hero-studio-desc {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 420px;
+  margin-top: 2rem;
+}
+
 .hero-image {
   position: relative;
   overflow: hidden;
@@ -207,7 +216,7 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 25%;
   display: block;
   filter: grayscale(20%);
 }
@@ -345,7 +354,7 @@ nav {
 }
 
 .about-content {
-  padding: 4rem 4%;
+  padding: 2rem 4%;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -365,6 +374,11 @@ nav {
   gap: 0.6rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
+}
+
+.bio-block:first-child {
+  border-top: none;
+  padding-top: 0;
 }
 
 .bio-name {
@@ -838,9 +852,10 @@ footer {
   <div class="hero-content">
     <p class="hero-eyebrow">Pez Guía Studio</p>
     <h1 data-es="Todo comienza con una historia." data-en="Everything begins with a story.">Todo comienza con una historia.</h1>
+    <p class="hero-studio-desc" data-es="Pez Guía Studio es una productora creativa fundada por Denisse Prieto y Cecilia Parodi, un dúo de productoras con más de 16 años de experiencia en cine, series y contenido original para plataformas como Netflix y Paramount, y production service para Apple, con trayectoria en Argentina, México y EUA." data-en="Pez Guía Studio is a creative production company founded by Denisse Prieto and Cecilia Parodi, a producer duo with over 16 years of experience in film, series, and original content for platforms such as Netflix and Paramount, and production service for Apple, with a trajectory spanning Argentina, Mexico, and the USA.">Pez Guía Studio es una productora creativa fundada por Denisse Prieto y Cecilia Parodi, un dúo de productoras con más de 16 años de experiencia en cine, series y contenido original para plataformas como Netflix y Paramount, y production service para Apple, con trayectoria en Argentina, México y EUA.</p>
   </div>
   <div class="hero-image">
-    <img alt="Denisse Prieto y Cecilia Parodi" src="img/founders/founders-3.jpg"/>
+    <img alt="Denisse Prieto y Cecilia Parodi" src="img/founders/recorte.png"/>
   </div>
 </section>
 
@@ -910,9 +925,6 @@ footer {
     <img alt="Denisse Prieto y Cecilia Parodi" src="img/founders/founders-1.jpg"/>
   </div>
   <div class="about-content">
-    <p class="about-intro" data-es="Pez Guía Studio es una productora creativa fundada por Denisse Prieto y Cecilia Parodi, un dúo de productoras con más de 16 años de experiencia en cine, series y contenido original para plataformas como Netflix y Paramount, con trayectoria en Argentina, México y EUA." data-en="Pez Guía Studio is a creative production company founded by Denisse Prieto and Cecilia Parodi, a producer duo with over 16 years of experience in film, series, and original content for platforms such as Netflix and Paramount, with a trajectory spanning Argentina, Mexico, and the USA.">Pez Guía Studio es una productora creativa fundada por Denisse Prieto y Cecilia Parodi, un dúo de productoras con más de 16 años de experiencia en cine, series y contenido original para plataformas como Netflix y Paramount, con trayectoria en Argentina, México y EUA.</p>
-
-    <p class="about-intro" style="font-size: 0.95rem; line-height: 1.75; color: var(--muted);" data-es="En Pez Guía Studio, la ficción y la publicidad se encuentran bajo una misma filosofía creativa: contar historias con autenticidad, sensibilidad e imaginación audaz, siempre comprometidas con la excelencia, la emoción y la narrativa que conecta." data-en="At Pez Guía Studio, fiction and advertising meet under the same creative philosophy: to craft stories with authenticity, sensitivity, and bold imagination, always committed to excellence, emotion, and storytelling that connects.">En Pez Guía Studio, la ficción y la publicidad se encuentran bajo una misma filosofía creativa: contar historias con autenticidad, sensibilidad e imaginación audaz, siempre comprometidas con la excelencia, la emoción y la narrativa que conecta.</p>
 
     <div class="bio-block">
       <span class="bio-name">Cecilia Parodi</span>
@@ -987,10 +999,6 @@ footer {
       <div class="contact-detail">
         <span class="contact-detail-label" data-es="Contacto" data-en="Contact">Contacto</span>
         <a href="mailto:info@pezguia.com">info@pezguia.com</a>
-      </div>
-      <div class="contact-detail">
-        <span class="contact-detail-label" data-es="Teléfono" data-en="Phone">Teléfono</span>
-        <a href="tel:+525567901620">+52 55 6790 1620</a>
       </div>
       <div class="contact-detail">
         <span class="contact-detail-label">Instagram</span>
