@@ -203,8 +203,7 @@ nav {
   font-weight: 400;
   line-height: 1.7;
   color: var(--muted);
-  max-width: 420px;
-  margin-top: 2rem;
+  max-width: 100%;
 }
 
 .hero-image {
@@ -301,21 +300,23 @@ nav {
 /* stills grid */
 .stills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2px;
   border-bottom: 1px solid var(--border);
 }
 
 .still {
   overflow: hidden;
-  aspect-ratio: 16/10;
   background: #111;
 }
 
-.still.tall {
+.still-tall {
   grid-row: span 2;
   aspect-ratio: auto;
+}
+
+.still-small {
+  aspect-ratio: 4/3;
 }
 
 .still img {
@@ -330,6 +331,34 @@ nav {
 .still:hover img {
   transform: scale(1.04);
   filter: grayscale(0%);
+}
+
+.services-still {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/5;
+  border-bottom: 1px solid var(--border);
+}
+
+.services-still img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: grayscale(15%);
+}
+
+.services-still-caption {
+  position: absolute;
+  bottom: 1rem;
+  right: 4%;
+  font-family: 'AntarcticanMono', monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cream);
+  pointer-events: none;
 }
 
 /* ── ABOUT ── */
@@ -717,8 +746,9 @@ footer {
   .hero-image { height: 55vw; border-right: none; }
 
   .project-header { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 5%; }
-  .stills-grid { grid-template-columns: 1fr 1fr; }
-  .still.tall { grid-row: span 1; aspect-ratio: 16/10; }
+  .stills-grid { grid-template-columns: 1fr; }
+  .still-tall { grid-row: span 1; aspect-ratio: 4/3; }
+  .still-small { aspect-ratio: 4/3; }
 
   .about-grid { grid-template-columns: 1fr; }
   .about-image { height: 60vw; border-right: none; border-bottom: 1px solid var(--border); }
@@ -855,7 +885,7 @@ footer {
     <p class="hero-studio-desc" data-es="Pez Guía Studio es una productora creativa fundada por Denisse Prieto y Cecilia Parodi, un dúo de productoras con más de 16 años de experiencia en cine, series y contenido original para plataformas como Netflix y Paramount, y production service para Apple, con trayectoria en Argentina, México y EUA." data-en="Pez Guía Studio is a creative production company founded by Denisse Prieto and Cecilia Parodi, a producer duo with over 16 years of experience in film, series, and original content for platforms such as Netflix and Paramount, and production service for Apple, with a trajectory spanning Argentina, Mexico, and the USA.">Pez Guía Studio es una productora creativa fundada por Denisse Prieto y Cecilia Parodi, un dúo de productoras con más de 16 años de experiencia en cine, series y contenido original para plataformas como Netflix y Paramount, y production service para Apple, con trayectoria en Argentina, México y EUA.</p>
   </div>
   <div class="hero-image">
-    <img alt="Denisse Prieto y Cecilia Parodi" src="img/founders/recorte.png"/>
+    <img alt="Denisse Prieto y Cecilia Parodi" src="img/founders/nueva.png"/>
   </div>
 </section>
 
@@ -866,26 +896,20 @@ footer {
   <h2 class="project-title" data-es="La Divina<br/><em>Providencia</em>" data-en="La Divina<br/><em>Providencia</em>">La Divina<br/><em>Providencia</em></h2>
   <div class="project-meta">
     <span class="project-type" data-es="Documental · En pre-producción" data-en="Documentary · In pre-production">Documental · En pre-producción</span>
-    <p class="project-synopsis" data-es="Un documental que explora la fe, la devoción y la vida cotidiana a través de historias que revelan la esencia de la condición humana. Un retrato íntimo de quienes encuentran en lo divino su guía." data-en="A documentary exploring faith, devotion, and everyday life through stories that reveal the essence of the human condition. An intimate portrait of those who find their guide in the divine.">Un documental que explora la fe, la devoción y la vida cotidiana a través de historias que revelan la esencia de la condición humana. Un retrato íntimo de quienes encuentran en lo divino su guía.</p>
+    <p class="project-synopsis" data-es="Un documental de Misús Ricalde que explora la fé, la devoción y la vida cotidiana a través de historias que revelan la esencia de la condición humana. Un retrato íntimo de quienes encuentran en lo divino su guía. En coproducción con The Maestros Cine." data-en="A documentary by Misús Ricalde exploring faith, devotion, and everyday life through stories that reveal the essence of the human condition. An intimate portrait of those who find their guide in the divine. In co-production with The Maestros Cine.">Un documental de Misús Ricalde que explora la fé, la devoción y la vida cotidiana a través de historias que revelan la esencia de la condición humana. Un retrato íntimo de quienes encuentran en lo divino su guía. En coproducción con The Maestros Cine.</p>
     <span class="project-status" data-es="En pre-producción" data-en="In pre-production">En pre-producción</span>
   </div>
 </div>
 
 <div class="stills-grid">
-  <div class="still tall">
+  <div class="still still-tall">
     <img alt="La Divina Providencia" src="img/stills/still-2.jpg"/>
   </div>
-  <div class="still">
+  <div class="still still-small">
     <img alt="La Divina Providencia" src="img/stills/still-1.jpg"/>
   </div>
-  <div class="still">
-    <img alt="La Divina Providencia" src="img/stills/still-4.jpg"/>
-  </div>
-  <div class="still">
+  <div class="still still-small">
     <img alt="La Divina Providencia" src="img/stills/still-3.jpg"/>
-  </div>
-  <div class="still">
-    <img alt="La Divina Providencia" src="img/stills/still-6.png"/>
   </div>
 </div>
 
@@ -915,6 +939,11 @@ footer {
       <li data-es="Marcas globales y locales" data-en="Global and local brands">Marcas globales y locales</li>
     </ul>
   </div>
+</div>
+
+<div class="services-still">
+  <img alt="La Divina Providencia" src="img/stills/still-4.jpg"/>
+  <span class="services-still-caption">La Divina Providencia</span>
 </div>
 
 <!-- ABOUT -->
